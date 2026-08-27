@@ -1,0 +1,53 @@
+{
+  "success": "true",
+  "tasks": {
+    "rows": [
+      {
+        "id": 1,
+        "name": "Documentation Project",
+        "expanded": true,
+        "children": [
+          {
+            "id": 2,
+            "name": "Preparation",
+            "expanded": true,
+            "children": [
+              { "id": 6, "name": "Proof-read docs", "startDate": "2026-01-02", "endDate": "2026-01-09" },
+              { "id": 3, "name": "Release docs",    "startDate": "2026-01-09", "endDate": "2026-01-10" }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Development",
+            "expanded": true,
+            "children": [
+              { "id": 7, "name": "Write API docs",  "startDate": "2026-01-05", "endDate": "2026-01-12" },
+              { "id": 8, "name": "Write tutorials", "startDate": "2026-01-10", "endDate": "2026-01-16" },
+              { "id": 9, "name": "Create examples", "startDate": "2026-01-12", "endDate": "2026-01-18" }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Review & Release",
+            "expanded": true,
+            "children": [
+              { "id": 10, "name": "Team review",     "startDate": "2026-01-18", "endDate": "2026-01-20" },
+              { "id": 11, "name": "Final approval",  "startDate": "2026-01-20", "endDate": "2026-01-21" },
+              { "id": 12, "name": "Public release",  "startDate": "2026-01-22", "endDate": "2026-01-22" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "rows": [
+      { "fromTask": 6,  "toTask": 3  },
+      { "fromTask": 7,  "toTask": 8  },
+      { "fromTask": 8,  "toTask": 9  },
+      { "fromTask": 9,  "toTask": 10 },
+      { "fromTask": 10, "toTask": 11 },
+      { "fromTask": 11, "toTask": 12 }
+    ]
+  }
+}

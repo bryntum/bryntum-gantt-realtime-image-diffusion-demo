@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Bryntum CSS is loaded via <link> tags in index.html so DomHelper.setTheme()
+   can swap themes at runtime (CSS @import cannot be retargeted) */
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  height: auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.app-toolbar {
+  border-bottom: 1px solid var(--border);
+  padding: 6px 16px;
+}
+
+.toolbar-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.banner {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.banner.error {
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+}
+
+.section-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 12px 16px 8px;
+}
+
+.stage {
+  position: relative;
+  height: 60vh;
+  margin: 12px 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gantt-wrap,
+.gantt-wrap .b-gantt {
+  height: 100%;
+}
+
+/* HTML-in-Canvas capture: the canvas fills the stage and paints the Gantt
+   that lives inside it. The child must be a NORMAL-FLOW block filling the
+   canvas box (not absolutely positioned) — hit-testing on canvas children
+   relies on their layout box plus the transform returned by
+   drawElementImage, and absolute positioning breaks click targeting. */
+.capture-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.capture-canvas .gantt-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+/* Shown when the HTML-in-Canvas API is unavailable */
+.unsupported {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Larger text renders with more pixels in the 704px frame, so the model can
+   reproduce it legibly — small text is what diffusion garbles first */
+.gantt-wrap .b-gantt {
+  /* Bryntum defaults to 14px; make dependency drag handles larger. */
+  --b-dependency-terminal-size: 20px;
+  font-size: 1.5rem;
+}
+
+/* Full-size AI render over the Gantt. pointer-events: none lets clicks and
+   drags fall through to the real Gantt underneath. */
+.ai-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.prompt-board {
+  padding-bottom: 24px;
+}
+
+.prompt-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 16px 12px;
+}
+
+/* Grow to share each row evenly, from a common base width so the pills line
+   up tidily instead of leaving ragged gaps */
+.prompt-grid .b-button {
+  flex: 1 0 130px;
+}
+
+.custom-prompt-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 16px;
+}
+
+.custom-prompt {
+  flex: 1;
+}
+
+.style-thumbnail {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
