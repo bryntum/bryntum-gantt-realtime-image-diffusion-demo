@@ -12,7 +12,7 @@ npm install
 
 ## Get a Fal token
 
-Sign up to [Fal](https://fal.ai/), the generative AI platform. Complete signup and you'll land in the [dashboard](https://fal.ai/dashboard).
+Sign up to [Fal](https://fal.ai/), the generative AI platform. Complete signup and you'll land in the [dashboard](https://fal.ai/dashboard). You get $5 free credits, which is enough to try it out.
 
 Go to https://fal.ai/dashboard/keys then click **Add key**, give it a name , and create it. Copy the key immediately as it's only shown once.
 
