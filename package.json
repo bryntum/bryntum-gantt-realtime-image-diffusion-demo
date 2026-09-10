@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@bryntum/gantt": "^7.3.5",
+    "@bryntum/gantt": "npm:@bryntum/gantt-trial@^7.3.5",
     "@bryntum/gantt-react": "^7.3.5",
     "@fal-ai/client": "^1.10.1",
     "react": "^19.2.8",
