@@ -1,4 +1,4 @@
-import type { BryntumGanttProps } from '@bryntum/gantt-react';
+import type { BryntumGanttProps } from '@bryntum/gantt-react-enterprise';
 
 const ganttProps : BryntumGanttProps = {
     startDate  : new Date(2026, 0, 1),

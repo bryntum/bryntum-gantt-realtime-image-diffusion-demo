@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { DomHelper } from '@bryntum/gantt';
-import type { Button, Toolbar } from '@bryntum/gantt';
-import { BryntumButton, BryntumFilePicker, BryntumGantt, BryntumTextField, BryntumToolbar } from '@bryntum/gantt-react';
+import { DomHelper } from '@bryntum/core-enterprise';
+import type { Button, Toolbar } from '@bryntum/core-enterprise';
+import { BryntumButton, BryntumFilePicker, BryntumTextField, BryntumToolbar } from '@bryntum/core-react-enterprise';
+import { BryntumGantt } from '@bryntum/gantt-react-enterprise';
 import { ganttProps } from './GanttConfig';
 import { buildPrompt, createGanttDiffusion, describeImageStyle, HIC_SUPPORTED, STYLE_PRESETS, type StyleKey } from './fluxDiffusion';
 import { debounce } from './utils/debounce';

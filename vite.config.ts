@@ -116,7 +116,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), falTokenEndpoint(env.FAL_KEY)],
     optimizeDeps: {
-      include: ['@bryntum/gantt', '@bryntum/gantt-react'],
+      include: ['@bryntum/core-enterprise', '@bryntum/core-react-enterprise', '@bryntum/gantt-enterprise', '@bryntum/gantt-react-enterprise'],
     },
   }
 })
