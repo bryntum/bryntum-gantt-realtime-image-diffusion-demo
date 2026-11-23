@@ -236,9 +236,10 @@ const App = () => {
                         <canvas
                             ref={captureCanvasRef}
                             className="capture-canvas"
-                            {...{ layoutsubtree : 'true' }}
+                            // Chrome 157+ also needs content="drawable" here and drawable on the child
+                            {...{ layoutsubtree : 'true', content : 'drawable' }}
                         >
-                            <div className="gantt-wrap" ref={stageRef}>
+                            <div className="gantt-wrap" ref={stageRef} {...{ drawable : '' }}>
                                 <BryntumGantt ref={gantt} {...ganttProps} />
                             </div>
                         </canvas>
