@@ -38,4 +38,4 @@ Run the Vite development server:
 npm run dev
 ```
 
-The server will start on `http://localhost:5173`. The HTML-in-Canvas API that this demo uses needs Chrome Canary version 149+ or Brave Stable. You also need to enable `chrome://flags/#canvas-draw-element` and `chrome://flags/#enable-experimental-web-platform-features` from the URL input, then relaunch the browser.
+The server will start on `http://localhost:5173`. The HTML-in-Canvas API that this demo uses needs Chrome 157 or later. No browser flags are needed.
